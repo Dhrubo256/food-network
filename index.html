@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food | Network</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .home {
+            background: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.438)), url(images/HomeBg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            background-position: center;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- contact Modal -->
+    <div class="modal fade" id="contact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-danger shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary shadow" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success shadow" data-bs-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Opps! Sorry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    The food you want to order has solded
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <header>
+        <nav class=" navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">FOOD-NET</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Food Items
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#foodItems">Hamburger</a></li>
+                                <li><a class="dropdown-item" href="#foodItems">Pizza</a></li>
+                                <li><a class="dropdown-item" href="#foodItems">Lemon Juice</a></li>
+                                <li><a class="dropdown-item" href="#item2">Salad</a></li>
+                                <li><a class="dropdown-item" href="#item2">Ice-cream</a></li>
+                                <li><a class="dropdown-item" href="#item2">Noodles</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#customers" data-bs-target="#contact">
+                                Customers-Review
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contact">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- starting my home section -->
+    <section class="home" id="home">
+        <div
+            style="display: grid; place-content: center; place-items: center; height: 100%; -webkit-border-before-width: 100%;">
+            <h1 class="text-white">Welcome to Food Network</h1>
+            <h3 class="text-white">Let's become fit and healthy</h3>
+            <a href="#foodItems"><button class="btn btn-outline-light">Order Now</button></a>
+        </div>
+    </section>
+
+    <!-- food section -->
+
+    <section id="foodItems" class="container mt-4">
+        <h1 class="text-center fw-bold text-secondary g-2"><ins>Food Items</ins></h1>
+        <div class="row">
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/burger.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hamburger</h5>
+                    <p class="card-text">Tasty Hamburger with fry chicken and white sauce.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Order Me
+                    </button>
+                </div>
+            </div>
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/pizza.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza</h5>
+                    <p class="card-text">Pizza with white chili sauce and mayonnaise.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Order Me
+                    </button>
+                </div>
+            </div>
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/juice.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Lemon Juice</h5>
+                    <p class="card-text">Tasty lemon juice which is so healthy and sugar free.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Order Me
+                    </button>
+                </div>
+            </div>
+            <div id="item2" class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12"
+                style="width: 18rem;">
+                <img src="images/salad.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Salad</h5>
+                    <p class="card-text">Salad with cucumber,tomato,carrot and some lemon piece.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Order Me
+                    </button>
+                </div>
+            </div>
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/ice-cream.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ice Cream</h5>
+                    <p class="card-text">Tasty Ice cream with chocolate and kustard kone.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Order Me
+                    </button>
+                </div>
+            </div>
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/noodles.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Noodles</h5>
+                    <p class="card-text">Noodles with few pieces of chicken with tomato and A boiled egg.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Order Me
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- custormers review -->
+    <section id="customers" class="container">
+        <h1 class="text-center fw-bold text-secondary g-2"><ins>Customers Review</ins></h1>
+        <div class="row g-3">
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/amir.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Amir Khan</h5>
+                    <p class="card-text"><span class="text-danger fw-bold"><ins>Massage:</ins></span> A best food
+                        website for
+                        the current
+                        time!</p>
+                </div>
+            </div>
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/hrithik.webp" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hrithik Roshan</h5>
+                    <p class="card-text"><span class="text-danger fw-bold"><ins>Massage:</ins></span> You are doing a
+                        great job.
+                        Best of
+                        luck!</p>
+                </div>
+            </div>
+            <div class="card my-5 mx-auto border shadow shadow-md col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <img src="images/salman.jpg" class="mt-3 card-img-top w-75 d-block mx-auto" height="245px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Salman Khan</h5>
+                    <p class="card-text"><span class="text-danger fw-bold"><ins>Massage:</ins></span> An incredible job
+                        by Food
+                        Network to
+                        make people fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-dark py-4 text-center">
+        <span class="text-white text-center fw-bold">&copy All rights are reserved by developer <a
+                class="text-secondary" target="blank" href="https://github.com/Dhrubo256">Tahmid
+                Dhrubo</a></span>
+    </footer>
+    <!-- scripting my js file -->
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
